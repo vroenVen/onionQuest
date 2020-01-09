@@ -4,11 +4,10 @@ var coins=0;
 var dmgprce=10;
 var timer=0;
 var seconds=0;
-var embarked = false;
-var embCount = 10;
-//var whitehill = {"White Hill
+var embarked=false;
+var embCount=10;
+var basicMinionCost=1;
 
-console.log(document.cookie.get);
 function newlocation(a,b,c,d,e){
 	return {
 		name: a,
@@ -93,4 +92,20 @@ document.addEventListener("touchstart", function(event){
     };
     doubleTouchStartTimestamp = now;
 });
+setInterval(function(){tick();},1000);
+function tick(){
+	points-=minionAtack;
+	console.log("tick");
+	textupdate();
+}
+function uBasicMinion(){
+	if(basicMinionCost <= coins){	
+		minionAtack+=1;
+		coins-=1;
+		basicMinionCost = basicMinionCost*2
+		document.getElementById("bacicMinion").innerHTML = basicMinionCost;
+		textupdate();
+	}
+	
+}
 textupdate();
