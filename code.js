@@ -7,6 +7,7 @@ var seconds=0;
 var embarked=false;
 var embCount=10;
 var basicMinionCost=1;
+var minionAtack=0;
 
 function newlocation(a,b,c,d,e){
 	return {
