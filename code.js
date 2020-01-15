@@ -22,7 +22,7 @@ function newlocation(a,b,c,d,e){
 }
 
 var whitehill =  newlocation("White Hills",20,100,10,20)
-var mountan = newlocation("Mountan",10,20,20,30)
+var mountan = newlocation("Mountain",10,20,20,30)
 var curentLocation = whitehill;
 var list = {whitehill, mountan}
 function cLocation(){
