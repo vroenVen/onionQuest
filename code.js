@@ -102,7 +102,7 @@ function tick(){
 function uBasicMinion(){
 	if(basicMinionCost <= coins){	
 		minionAtack+=1;
-		coins-=1;
+		coins=coins-basicMinionCost;
 		basicMinionCost = basicMinionCost*2
 		document.getElementById("bacicMinion").innerHTML = basicMinionCost;
 		textupdate();
