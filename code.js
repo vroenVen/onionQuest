@@ -22,15 +22,15 @@ function newlocation(a,b,c,d,e){
 }
 
 var whitehill =  newlocation("White Hills",20,100,10,20)
-var mountan = newlocation("Mountan",10,20,20,30)
+var mountain = newlocation("Mountain",10,20,20,30)
 var curentLocation = whitehill;
-var list = {whitehill, mountan}
+var list = {whitehill, mountain}
 function cLocation(){
 	if (curentLocation.name == "whiteHills"){ whitehill = curentLocation;}
-	if (curentLocation.name == "mountan"){ mountan = curentLocation;}
+	if (curentLocation.name == "mountain"){ mountain = curentLocation;}
 	var name=document.getElementById("locationBox").value;
 	if (name == "whiteHills"){curentLocation = whitehill;}
-	if (name == "mountan"){curentLocation = mountan;}
+	if (name == "mountain"){curentLocation = mountain;}
 	//document.getElementById("Loca").innerHTML=curentLocation.Rname();
 	console.log(curentLocation.name);
 	textupdate();
@@ -102,7 +102,7 @@ function tick(){
 function uBasicMinion(){
 	if(basicMinionCost <= coins){	
 		minionAtack+=1;
-		coins-=1;
+		coins=coins-basicMinionCost;
 		basicMinionCost = basicMinionCost*2
 		document.getElementById("bacicMinion").innerHTML = basicMinionCost;
 		textupdate();
