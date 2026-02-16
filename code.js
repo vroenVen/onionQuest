@@ -18,6 +18,7 @@ function newlocation(a,b,c,d,e){
 		qReward: e,
 		qCount: d,
 		embarked: false,
+		quests_completed: 0,
 	}
 }
 
@@ -51,7 +52,7 @@ function textupdate(){
 	}
 	//seconds = test.getSeconds()+test.getMinutes;
 	if ((curentLocation.qCount >= curentLocation.qLenth) && (curentLocation.embarked)){
-		coins+=curentLocation.qReward;
+		coins+=curentLocation.qReward*1.1 ** currentLocation.quests_completed;
 		
 		curentLocation.embarked = false;
 		document.getElementById("questButton").innerHTML="embark";
@@ -110,3 +111,4 @@ function uBasicMinion(){
 	
 }
 textupdate();
+
