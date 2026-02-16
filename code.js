@@ -52,7 +52,7 @@ function textupdate(){
 	}
 	//seconds = test.getSeconds()+test.getMinutes;
 	if ((curentLocation.qCount >= curentLocation.qLenth) && (curentLocation.embarked)){
-		coins+=curentLocation.qReward*1.1 ** currentLocation.quests_completed;
+		coins+=curentLocation.qReward*1.1 ** curentLocation.quests_completed;
 		
 		curentLocation.embarked = false;
 		document.getElementById("questButton").innerHTML="embark";
@@ -111,4 +111,5 @@ function uBasicMinion(){
 	
 }
 textupdate();
+
 
