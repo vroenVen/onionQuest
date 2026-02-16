@@ -96,7 +96,7 @@ document.addEventListener("touchstart", function(event){
 });
 setInterval(function(){tick();},1000);
 function tick(){
-	points-=minionAtack;
+	points-=minionAtack * power;
 	console.log("tick");
 	textupdate();
 }
@@ -111,5 +111,6 @@ function uBasicMinion(){
 	
 }
 textupdate();
+
 
 
